@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-cloud-dependencies.version>Dalston.RELEASE</spring-cloud-dependencies.version>
+		<spring-cloud-dependencies.version>Hoxton.SR6</spring-cloud-dependencies.version>
 
 	</properties>
 
@@ -58,14 +58,16 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-config</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-eureka</artifactId>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+			<version>2.2.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.4.7.RELEASE</version>
+		</dependency>
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.session</groupId>-->
 <!--			<artifactId>spring-session</artifactId>-->
