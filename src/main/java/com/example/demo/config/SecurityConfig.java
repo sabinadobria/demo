@@ -21,8 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .inMemoryAuthentication()
                 .withUser("admin")
-                .password(passwordEncoder().encode("password"))
-                .roles("ADMIN");
+                .password(passwordEncoder().encode("password")).roles("ADMIN");
     }
 
     @Override
@@ -30,9 +29,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/books").permitAll()
                 .antMatchers(HttpMethod.GET, "/books/*").permitAll()
-                .antMatchers(HttpMethod.POST, "/books").authenticated()
-                .antMatchers(HttpMethod.PATCH, "/books/*").authenticated()
-                .antMatchers(HttpMethod.DELETE, "/books/*").authenticated()
+                .antMatchers(HttpMethod.POST, "/books").permitAll()
+                .antMatchers(HttpMethod.PATCH, "/books/*").permitAll()
+                .antMatchers(HttpMethod.DELETE, "/books/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf()
